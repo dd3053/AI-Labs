@@ -1,0 +1,13 @@
+1. Program Execution : 
+
+(i) Run the command "make". It will create the required Class Files.
+(ii) Execute : java Solution  -df $disount-factor -tol $tolerance-value -itr $maximum-number-of-iterations [-min] $file-name
+
+Example : java Solution -df .9 -tol 0.0001 test1.txt
+Note : In the abopve command the test1.txt file is in the same folder as Solution.java
+
+2. Input Specifications : 
+-df : Discount Factor must be in the range [0,1]
+-tol : Allowed Tolerance
+-iter : Maximum Allowed Iterations
+-min : Set to true to minimize the costs.

@@ -1,0 +1,17 @@
+1. Program Execution : 
+
+(i) Run the command "make". It will create the required Class Files.
+(ii) Execute : java Solution [-v] -start $start-node -goal $goal-node -alg [-depth] $depth $alg graph-file
+
+Example : java Solution -v -start S -goal G -alg ID -depth 6 ./example.txt
+Note : In the abopve command the example.txt file is in the same folder as Solution.java
+
+2. Input Specifications : 
+-v is an optional flag for verbose mode 
+-start is followed by the name of the node to start from
+-end is followed by the name of the node which is the goal
+-alg is followed by one of: BFS, ID, ASTAR
+-depth used only for iterative-deepening, that indicates the initial search depth, with a default increase of 1 after that.If entered in other Algorithm, the Error would be reported.
+-a graph file 
+
+-Iterative Deepening uses a Visited Set.

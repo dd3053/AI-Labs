@@ -1,0 +1,11 @@
+1. Program Execution : 
+
+(i) Run the command "make". It will create the required Class Files.
+
+(ii) Execute kNN : java Solution -mode knn -k $kParameter -d $distance_function [-unitw] -train $trainFile -test $testFile
+Example : java Solution -mode knn -k 7 -d manh  -unitw -train knn1.train.txt -test knn1.test.txt
+
+(iii) Execute kMeans : java Solution -mode kmeans -d $distance_function -data $input-file $cluster-list
+Example : java Solution -mode kmeans -d e2 -unitw -data kmeans-test.txt 0,0 200,200 500,500
+
+

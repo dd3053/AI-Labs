@@ -1,0 +1,40 @@
+Start : [Terminate, Play]
+Terminate = 0
+Replay = -2
+Replay : [Play]
+
+Play : [Coin_Toss_Head, Coin_Toss_Tail]
+Play % 0.55 0.45
+
+Coin_Toss_Head : [Coin_Toss_Head_Swap, Coin_Toss_Head_Keep]
+Coin_Toss_Tail : [Coin_Toss_Tail_Swap, Coin_Toss_Tail_Keep]
+
+Coin_Toss_Head_Swap : [Coin_Toss_Head_Swap_Head , Coin_Toss_Head_Swap_Tail]
+Coin_Toss_Head_Swap % 0.509 0.491
+Coin_Toss_Head_Keep : [Coin_Toss_Head_Keep_Head , Coin_Toss_Head_Keep_Tail]
+Coin_Toss_Head_Keep % 0.591 0.409
+
+Coin_Toss_Head_Swap_Head : [Replay, Terminate]
+Coin_Toss_Head_Swap_Tail : [Replay, Terminate]
+Coin_Toss_Head_Keep_Head : [Replay, Terminate]
+Coin_Toss_Head_Keep_Tail : [Replay, Terminate]
+
+Coin_Toss_Tail_Swap : [Coin_Toss_Tail_Swap_Head , Coin_Toss_Tail_Swap_Tail]
+Coin_Toss_Tail_Swap % 0.6 0.4
+Coin_Toss_Tail_Keep : [Coin_Toss_Tail_Keep_Head , Coin_Toss_Tail_Keep_Tail]
+Coin_Toss_Tail_Keep % 0.5 0.5
+
+Coin_Toss_Tail_Swap_Head : [Replay, Terminate]
+Coin_Toss_Tail_Swap_Tail : [Replay, Terminate]
+Coin_Toss_Tail_Keep_Head : [Replay, Terminate]
+Coin_Toss_Tail_Keep_Tail : [Replay, Terminate]
+
+Coin_Toss_Head_Swap_Head = 105
+Coin_Toss_Head_Swap_Tail = -100
+Coin_Toss_Head_Keep_Head = -100
+Coin_Toss_Head_Keep_Tail = 105
+Coin_Toss_Tail_Swap_Head = -100
+Coin_Toss_Tail_Swap_Tail = 105
+Coin_Toss_Tail_Keep_Head = 105
+Coin_Toss_Tail_Keep_Tail = -100
+

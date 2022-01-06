@@ -1,0 +1,13 @@
+1. Program Execution : 
+
+(i) Run the command "make". It will create the required Class Files.
+(ii) Execute : java Solution [-v] -mode $mode $input-file
+
+Example : java Solution -v -mode solver ./test1.txt
+Note : In the abopve command the example.txt file is in the same folder as Solution.java
+
+2. Input Specifications : 
+-v is an optional flag for verbose mode 
+-mode : dpll,cnf,solver
+
+Handled the Paranthesis and the Australia Coloring Test.
